@@ -5,4 +5,4 @@ Description:
 
 Meet your adorable Tamagotchi friend! 
 You will need to feed your little pet, make sure it gets enough sleep and play with it to ensure it doesn't get bored. 
-Your pet is just one year old. Interact with your Tamagotchi and see how it grows! Your pet is in the danger of dying should it hit 3 on a scale of 1-10 on its Hunger, Sleepiness or Boredom Level. Will you be able to be a responsible pet parent? 
+Your pet is just one year old. Interact with your Tamagotchi and see how it grows! WARNING! Your pet is in the danger of dying should it hit 3 on a scale of 1-10 on its Hunger, Sleepiness or Boredom Level. Will you be able to be a responsible pet parent? 
