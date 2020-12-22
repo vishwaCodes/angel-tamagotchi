@@ -5,6 +5,6 @@
 //console.log(tamagotchiImage);
 
 
-const tamagotchiImage = $('tamagotchi-image');
-console.log(tamagotchiImage);
+//const tamagotchiImage = $('tamagotchi-image');
+//console.log(tamagotchiImage);
 
