@@ -2,3 +2,10 @@ body {
     background-color: lavenderblush;
 }
 
+#tamagotchi-image {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
