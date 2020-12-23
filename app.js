@@ -11,6 +11,23 @@ function renderStats() {
     $('age').text(`Age:`);
 };
 
+// Set Tamagotchi class 
+
+class Tama {
+    constructor() {
+        this.name = ''
+        this.hunger = 10;
+        this.sleepiness = 10;
+        this.boredom = 10;
+        this.age = 1;
+    }
+
+
+}
+
+
+
+
 
 // Set functions for all the buttons 
 
@@ -82,7 +99,7 @@ function startTimer () {
 
 //startTimer();
 
-
+// clearinterval 
 
 
 
