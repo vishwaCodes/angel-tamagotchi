@@ -5,10 +5,10 @@
 let timer = 0;
 
 function renderStats() {
-    $('.hunger').text(`Hunger Level: `);
-    $('.sleepiness').text(`Sleepiness Level: `);
-    $('.boredom').text(`Boredom Level: `);
-    $('age').text(`Age:`);
+    $('.hunger').text(`Hunger Level: ${tama.hunger} /10`);
+    $('.sleepiness').text(`Sleepiness Level: ${tama.sleepiness} /10 `);
+    $('.boredom').text(`Boredom Level: ${tama.boredom} /10`);
+    $('age').text(`Age: ${tama.age}`);
 };
 
 // Set Tamagotchi class 
@@ -22,8 +22,26 @@ class Tama {
         this.age = 1;
     }
 
-
 }
+
+const tama = new Tama()
+
+
+// Death
+
+function tamaDeath () {
+    if (tama.hunger <= 3) {
+       alert('Your Tamagotchi died');
+    } else if (tama.sleepiness <= 3) {
+        alert('Your Tamagotchi died');
+    } else if (tama.boredom <= 3) {
+        alert('Your Tamagotchi died');
+    }
+};
+
+
+
+
 
 
 
@@ -36,6 +54,7 @@ const tamaEgg = $('#egg-crack');
 
 function startButton () {
  tamaEgg.attr('src', "https://media.tenor.com/images/9cbc278974a310baf4d2ff9010c46d66/tenor.gif");
+ startTimer();
 };
 
 $('.startGame').on('click', startButton);
@@ -45,7 +64,7 @@ const tamaFeed = $('.feed');
 
 function feedTama () {
     
-};
+}
 
 $('.feed').on('click', feedTama);
 
@@ -84,17 +103,34 @@ $('lightsOn').on('click', wakeTama);
 
 // Start Timer
 
-const time = $('#timer');
+//const time = $('#timer');
 
 function startTimer () {
-    const counter = setInterval(function() {
-        timer++;
+    const interval = setInterval(function() {
+        
 
         renderStats();
 
+        if (timer % 15 === 0) {
+            tama.age += 1;
+        } else if (timer % 12 === 0) {
+            tama.hunger -= 1;
+        } else if (timer % 9 === 0) {
+            tama.sleepiness -= 1;
+        } else if (timer % 6 === 0) {
+            tama.boredom -= 1;
+        } else {
+            clearInterval(startTimer);
+        }
 
-        time.text(`Timer: ${timer}`);
+        timer++;
+
+    
+
+
+        //time.text(`Timer: ${timer}`);
     }, 1000); 
+    return interval;
 };
 
 //startTimer();
@@ -102,5 +138,7 @@ function startTimer () {
 // clearinterval 
 
 
+
+// Death 
 
 
