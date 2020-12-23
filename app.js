@@ -1,4 +1,17 @@
 
+
+// When the user clicks start game the timer should start
+
+let timer = 0;
+
+function renderStats() {
+    $('.hunger').text(`Hunger Level: `);
+    $('.sleepiness').text(`Sleepiness Level: `);
+    $('.boredom').text(`Boredom Level: `);
+    $('age').text(`Age:`);
+};
+
+
 // Set functions for all the buttons 
 
 // Start Game 
@@ -17,7 +30,7 @@ function feedTama () {
     
 };
 
-$('.feed').on('click', tamaFeed);
+$('.feed').on('click', feedTama);
 
 
 // Playtime
@@ -27,7 +40,7 @@ function  playTama () {
     
 };
 
-$('.bored').on('click', tamaPlay);
+$('.bored').on('click', playTama);
 
 
 // I need a nap
@@ -37,7 +50,7 @@ function napTama () {
     
 };
 
-$('.lightsOff').on('click', tamaNap);
+$('.lightsOff').on('click', napTama);
 
 // Time to wake me up
 const tamaWake = $('.lightsOn');
@@ -46,5 +59,31 @@ function wakeTama () {
     
 };
 
-$('lightsOn').on('click', tamaWake);
+$('lightsOn').on('click', wakeTama);
+
+
+
+
+
+// Start Timer
+
+const time = $('#timer');
+
+function startTimer () {
+    const counter = setInterval(function() {
+        timer++;
+
+        renderStats();
+
+
+        time.text(`Timer: ${timer}`);
+    }, 1000); 
+};
+
+//startTimer();
+
+
+
+
+
 
