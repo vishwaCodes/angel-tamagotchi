@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
     <script src="https://code.jquery.com/jquery-3.4.1.js" defer integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="/app.js" defer></script>
     <script src="/tamagotchi-pet.js" defer></script>
@@ -19,13 +21,9 @@
       </header>
 
       <!-- Tamagotchi Image -->
-      <div class="tamagotchi-img">
-          <section class="tamagotchi-image-section">
-              <article>
-                  
-              </article>
-          </section>
-      </div>  
+      <div>
+          <img src="" alt="">
+      </div> 
       
       <!-- Tama egg popping-->
       <div>
@@ -53,14 +51,10 @@
       <div id="timer"></div>
 
       <!-- Display Metrics -->
-      <div class="display-metrics">
-          <section class="display">
-              <h3 class="hunger">Hunger Level: </h3>
-              <h3 class="sleepiness">Sleepiness Level: </h3>
-              <h3 class="boredom">Boredom Level: </h3>
-              <h3 class="age">Age: 1</h3>
-          </section>
-
+      <div id="hunger"></div>
+      <div id="sleep"></div>
+      <div id="play"></div>
+      <div id="age"></div>
 
 
       </div>
@@ -72,11 +66,11 @@
       </div>
 
       <!-- Tamagotchi Gameplay Buttons-->
-      <div class="gameplay">
-          <button class="feed">Feed me yummy food</button>
-          <button class="bored">Playtime</button>
-          <button class="lightsOff">I need a nap</button>
-          <button class="lightsOn">Time to wake me up</button>
+      <div class="gameplay-buttons">
+          <button id="feed">Feed me yummy food</button>
+          <button id="bored">Playtime</button>
+          <button id="lightsOff">I need a nap</button>
+          <button id="lightsOn">Time to wake me up</button>
       </div>
 
 
