@@ -1,43 +1,44 @@
 
+// Start the game with naming the Tamagotchi
+// Set window onload function 
+// When the name of the Tamagotchi is entered, the text in h3 changes to the name
 
-// When the user clicks start game the timer should start
 
-let timer = 0;
 
-function renderStats() {
-    $('.hunger').text(`Hunger Level: ${tama.hunger} /10`);
-    $('.sleepiness').text(`Sleepiness Level: ${tama.sleepiness} /10 `);
-    $('.boredom').text(`Boredom Level: ${tama.boredom} /10`);
-    $('age').text(`Age: ${tama.age}`);
-};
-
-// Set Tamagotchi class 
-
-class Tama {
-    constructor() {
-        this.name = ''
-        this.hunger = 10;
-        this.sleepiness = 10;
-        this.boredom = 10;
-        this.age = 1;
+window.onload = function() {
+    class Tama {
+        constructor(name) {
+            this.name = name;
+        }
     }
+    const tama = new Tama();
 
+const tamaName = prompt('What would you like to name your new pet?', '');
+if (tamaName !== null) {
+    $('#pet-name').html('Meet your adorable new pet ' + tamaName);
 }
-
-const tama = new Tama()
-
-
-// Death
-
-function tamaDeath () {
-    if (tama.hunger <= 3) {
-       alert('Your Tamagotchi died');
-    } else if (tama.sleepiness <= 3) {
-        alert('Your Tamagotchi died');
-    } else if (tama.boredom <= 3) {
-        alert('Your Tamagotchi died');
-    }
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -49,22 +50,17 @@ function tamaDeath () {
 
 // Set functions for all the buttons 
 
-// Start Game 
-const tamaEgg = $('#egg-crack');
 
-function startButton () {
- tamaEgg.attr('src', "https://media.tenor.com/images/9cbc278974a310baf4d2ff9010c46d66/tenor.gif");
- startTimer();
-};
 
-$('.startGame').on('click', startButton);
 
 // Feed me yummy food
 const tamaFeed = $('.feed');
 
 function feedTama () {
+       tama.hunger += 1;
     
-}
+    
+};
 
 $('.feed').on('click', feedTama);
 
@@ -73,7 +69,12 @@ $('.feed').on('click', feedTama);
 const tamaPlay = $('.bored');
 
 function  playTama () {
-    
+    if (tama.boredom < 10) {
+       tama.boredom += 1;
+    } else {
+        tama.boredom +=1;
+        tamaDeath();
+    };
 };
 
 $('.bored').on('click', playTama);
@@ -83,7 +84,12 @@ $('.bored').on('click', playTama);
 const tamaNap = $('.lightsOff');
 
 function napTama () {
-    
+    if (tama.sleepiness < 10) {
+       tama.sleepiness += 1
+    } else {
+        tama.sleepiness += 1;
+        tamaDeath();
+    }
 };
 
 $('.lightsOff').on('click', napTama);
@@ -92,10 +98,15 @@ $('.lightsOff').on('click', napTama);
 const tamaWake = $('.lightsOn');
 
 function wakeTama () {
-    
+    if (tama.sleepiness ) {
+
+    }
 };
 
 $('lightsOn').on('click', wakeTama);
+
+
+// 
 
 
 
@@ -109,7 +120,7 @@ function startTimer () {
     const interval = setInterval(function() {
         
 
-        renderStats();
+        
 
         if (timer % 15 === 0) {
             tama.age += 1;
@@ -129,7 +140,7 @@ function startTimer () {
 
 
         //time.text(`Timer: ${timer}`);
-    }, 1000); 
+    }, 2000); 
     return interval;
 };
 
