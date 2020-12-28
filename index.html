@@ -46,8 +46,6 @@
       </div>
 
 
-      <div id="timer"></div>
-
       
 
       <div>
@@ -58,17 +56,18 @@
 
       <!-- Game Stats -->
 
-      <div id="hunger">
-        <h3>Hunger Level</h3>
+      <div id="hunger-status">
+          <progress id="hungerProgress" min="0" max="10" value="0"></progress>
+      </div>
+
+    <div id="play-status">
+        <progress id="playProgress" max="10" value="0"></progress>
     </div>
-    <div id="play">
-        <h3>Boredom Level</h3>
+    <div id="sleep-status">
+        <progress id="sleepProgress" max="10" value="0"></progress>
     </div>
-    <div id="sleeo">
-        <h3>Sleep Level</h3>
-    </div>
-    <div id="age">
-        <h3>Age</h3>
+    <div id="age-status">
+        <progress id="ageProgress" max="15" value="1"></progress>
     </div>
 
 
