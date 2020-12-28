@@ -9,15 +9,38 @@ window.onload = function() {
     class Tama {
         constructor(name) {
             this.name = name;
-        }
-    }
+        };
+    };
     const tama = new Tama();
 
-const tamaName = prompt('What would you like to name your new pet?', '');
-if (tamaName !== null) {
-    $('#pet-name').html('Meet your adorable new pet ' + tamaName);
-}
+  const tamaName = prompt('What would you like to name your new pet?', '');
+  if (tamaName !== null) {
+    $('#pet-name').html('Meet your adorable new pet ' + tamaName + '!');
 };
+     
+};
+
+
+// Create a sub class
+
+class Tamagotchi extends Tama {
+    constructor() {
+        super();
+        this.hunger = 1;
+        this.sleepiness = 1;
+        this.boredom = 1;
+        this.age = 1;
+    };
+};
+
+
+
+
+
+
+
+
+
 
 
 
