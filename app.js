@@ -25,9 +25,9 @@ window.onload = function() {
 
 // Set the values for hunger, sleepiness, boredom and age
 
-let hunger = 1;
-let sleepiness = 1;
-let boredom = 1;
+let hunger = 9;
+let sleepiness = 9;
+let boredom = 9;
 let age = 1;
 
 
@@ -49,8 +49,8 @@ const updateLevels = setInterval(updateStats, 500);
 // Add event listeners to buttons
 
 $('#feed').on('click', hungerUp);
-$('#play').on('click', boredomUp);
-$('#sleep').on('click', sleepUp);
+$('#bored').on('click', boredomUp);
+$('#sleepiness').on('click', sleepUp);
 
 
 
@@ -145,10 +145,10 @@ function clearIntervals () {
 // Update Stats
 
 function updateStats () {
-    $('#hungerProgress').text(hunger);
-    $('#playProgress').text(boredom);
-    $('#sleepProgress').text(sleepiness);
-    $('#ageProgress').text(age);
+    $('#hungerProgress').val(hunger);
+    $('#playProgress').val(boredom);
+    $('#sleepProgress').val(sleepiness);
+    $('#ageProgress').val(age);
     
 };
 
