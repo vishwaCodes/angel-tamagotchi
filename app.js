@@ -23,25 +23,12 @@ window.onload = function() {
 
 
 
-// Create a sub class
+// Set the values for hunger, sleepiness, boredom and age
 
-class Tamagotchi {
-    constructor() {
-    this.hunger = 1;
-    this.sleepiness = 1;
-    this.boredom = 1;
-    this.age = 1;
-    };
-};
-
-const tamagotchi = new Tamagotchi();
-
-// Add event listeners to buttons
-
-$('#feed').on('click', hungerUp);
-$('#play').on('click', boredomUp);
-$('#sleep').on('click', sleepUp);
-
+let hunger = 1;
+let sleepiness = 1;
+let boredom = 1;
+let age = 1;
 
 
 // Set interval, the game stats go down every 5 seconds
@@ -59,65 +46,74 @@ const ageTime = setInterval(ageUp, 20000);
 const updateLevels = setInterval(updateStats, 500);
 
 
+// Add event listeners to buttons
+
+$('#feed').on('click', hungerUp);
+$('#play').on('click', boredomUp);
+$('#sleep').on('click', sleepUp);
+
+
+
 // Functions for hunger, sleep and boredom going up
 
 function hungerUp () {
-    if (tamagotchi.hunger < 10) {
-        tamagotchi.hunger += 1;
+    if (hunger < 10) {
+        hunger += 1;
     } else {
-        tamagotchi.hunger += 1;
+        hunger += 1;
         tamaDeath();
     };
 };
 
-
-function boredomUp () {
-    if (tamagotchi.boredom < 10) {
-       tamagotchi.boredom +=1;
-    } else {
-        tamagotchi.boredom += 1;
-        tamaDeath();
-    };
-};
 
 function sleepUp () {
-    if (tamagotchi.sleepiness < 10) {
-        tamagotchi.sleepiness += 1;
+    if (sleepiness < 10) {
+        sleepiness += 1;
     } else {
-        tamagotchi.sleepiness += 1;
+        sleepiness += 1;
         tamaDeath();
     };
 };
+
+function boredomUp () {
+    if (boredom < 10) {
+       boredom +=1;
+    } else {
+        boredom += 1;
+        tamaDeath();
+    };
+};
+
 
 
 
 // Functions for huger, sleep, and boredom going down
 
 function hungerDown () {
-    if (tamagotchi.hunger === 10) {
+    if (hunger === 10) {
         tamaDeath();
     } else {
-        tamagotchi.hunger--;
+        hunger--;
         updateStats();
 
     };
 };
 
 function sleepinessDown () {
-    if (tamagotchi.sleepiness === 10) {
+    if (sleepiness === 10) {
         tamaDeath();
     } else {
-        tamagotchi.sleepiness--;
+        sleepiness--;
         updateStats();
     };
 };
 
 
 function boredomDown () {
-    if (tamagotchi.boredom === 10) {
+    if (boredom === 10) {
         tamaDeath();
     } else {
-        tamagotchi.boredom--;
+        boredom--;
         updateStats();
     };
 };
@@ -126,8 +122,13 @@ function boredomDown () {
 // Age function 
 
 function ageUp () {
-    tamagotchi.age++;
-    updateStats();
+    if (age === 15) {
+        tamaDeath();
+    } else {
+        age++;
+        updateStats();
+    };
+    
 };
 
 
@@ -144,25 +145,26 @@ function clearIntervals () {
 // Update Stats
 
 function updateStats () {
-    $('#hungerProgress').value = tamagotchi.hunger;
-    $('#playProgress').value = tamagotchi.boredom;
-    $('#sleepProgress').value = tamagotchi.sleepinesss;
-    $('#ageProgress').value = tamagotchi.age;
-}
+    $('#hungerProgress').text(hunger);
+    $('#playProgress').text(boredom);
+    $('#sleepProgress').text(sleepiness);
+    $('#ageProgress').text(age);
+    
+};
 
 // Tama Death 
 
 function tamaDeath () {
-    if (tamagotchi.hunger === 10) {
+    if (hunger === 10) {
         alert('Your pet has died out of hunger');
         clearIntervals();
-    } else if (tamagotchi.boredom === 10) {
+    } else if (boredom === 10) {
         alert('Your pet has died out of boredom');
         clearIntervals();
-    } else if (tamagotchi.sleepiness === 10) {
+    } else if (sleepiness === 10) {
         alert('Your pet has died out of tiredness');
         clearIntervals();
-    } else if (tamagotchi.age >= 15) {
+    } else if (age >= 15) {
         alert('Your pet has died of old age');
         clearIntervals();
     };
