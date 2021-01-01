@@ -25,10 +25,10 @@ window.onload = function() {
 
 // Set the values for hunger, sleepiness, boredom and age
 
-let hunger = 9;
-let sleepiness = 9;
-let boredom = 9;
-let age = 1;
+let hunger = 10;
+let sleepiness = 10;
+let boredom = 10;
+let age = 10;
 
 
 // Set interval, the game stats go down every 5 seconds
@@ -57,7 +57,7 @@ $('#sleepiness').on('click', sleepUp);
 // Functions for hunger, sleep and boredom going up
 
 function hungerUp () {
-    if (hunger < 10) {
+    if (hunger <= 3) {
         hunger += 1;
     } else {
         hunger += 1;
@@ -67,7 +67,7 @@ function hungerUp () {
 
 
 function sleepUp () {
-    if (sleepiness < 10) {
+    if (sleepiness <= 3) {
         sleepiness += 1;
     } else {
         sleepiness += 1;
@@ -76,7 +76,7 @@ function sleepUp () {
 };
 
 function boredomUp () {
-    if (boredom < 10) {
+    if (boredom <= 3) {
        boredom +=1;
     } else {
         boredom += 1;
@@ -90,7 +90,7 @@ function boredomUp () {
 // Functions for huger, sleep, and boredom going down
 
 function hungerDown () {
-    if (hunger === 10) {
+    if (hunger === 3) {
         tamaDeath();
     } else {
         hunger--;
@@ -100,7 +100,7 @@ function hungerDown () {
 };
 
 function sleepinessDown () {
-    if (sleepiness === 10) {
+    if (sleepiness === 3) {
         tamaDeath();
     } else {
         sleepiness--;
@@ -110,7 +110,7 @@ function sleepinessDown () {
 
 
 function boredomDown () {
-    if (boredom === 10) {
+    if (boredom === 3) {
         tamaDeath();
     } else {
         boredom--;
@@ -155,13 +155,13 @@ function updateStats () {
 // Tama Death 
 
 function tamaDeath () {
-    if (hunger === 10) {
+    if (hunger === 3) {
         alert('Your pet has died out of hunger');
         clearIntervals();
-    } else if (boredom === 10) {
+    } else if (boredom === 3) {
         alert('Your pet has died out of boredom');
         clearIntervals();
-    } else if (sleepiness === 10) {
+    } else if (sleepiness === 3) {
         alert('Your pet has died out of tiredness');
         clearIntervals();
     } else if (age >= 15) {
