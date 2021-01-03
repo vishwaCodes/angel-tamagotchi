@@ -48,9 +48,16 @@ const updateLevels = setInterval(updateStats, 500);
 
 // Add event listeners to buttons
 
-$('#feed').on('click', hungerUp);
+$('#feed').on('click', () => {
+    hungerUp();
+    
+});
+
+
 $('#bored').on('click', boredomUp);
 $('#sleepiness').on('click', sleepUp);
+
+
 
 
 
@@ -165,7 +172,7 @@ function tamaDeath () {
         alert('Your pet has died out of tiredness');
         clearIntervals();
     } else if (age >= 15) {
-        alert('Your pet has died of old age');
+        alert('Your pet has run away');
         clearIntervals();
     };
 };

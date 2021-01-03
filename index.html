@@ -9,6 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js" defer integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="/app.js" defer></script>
     <script src="/tamagotchi-pet.js" defer></script>
+    
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -34,6 +35,7 @@
       <!-- Tamagotchi Image (Made by me on SketchBook & later converted to a gif on Giphy)-->
       <div class="tama-img">
           <img src="/images/tamagotchi2.gif" alt="tama-og">
+          
       </div> 
       
 
@@ -49,39 +51,41 @@
 
       
 
-      <div id="take-care">
-        <p>Taking care of your baby Tama:</p>
-      </div>
 
       <!-- Game Stats -->
 
-      <div id="hunger-status">
+      <div id="game-stats">
+        <div id="hunger-status">
+            <p>
+                Hunger Level: 
+            <progress id="hungerProgress" min="0" max="10" value="0"></progress>
+            </p>
+        </div>
+  
+      <div id="play-status">
           <p>
-              Hunger Level: 
-          <progress id="hungerProgress" min="0" max="10" value="0"></progress>
+              Boredom Level:
+          <progress id="playProgress" min="0" max="10" value="0"></progress>
           </p>
       </div>
-
-    <div id="play-status">
-        <p>
-            Boredom Level:
-        <progress id="playProgress" min="0" max="10" value="0"></progress>
-        </p>
-    </div>
-    <div id="sleep-status">
-        <p>
-            Sleep level:
-        <progress id="sleepProgress" min="0" max="10" value="0"></progress>
-        </p>
-    </div>
-    <div id="age-status">
-        <p>
-            Age:
-        <progress id="ageProgress" min="0" max="15" value="1"></progress>
-        </p>
-    </div>
+      <div id="sleep-status">
+          <p>
+              Sleep level:
+          <progress id="sleepProgress" min="0" max="10" value="0"></progress>
+          </p>
+      </div>
+      <div id="age-status">
+          <p>
+              Age:
+          <progress id="ageProgress" min="0" max="15" value="1"></progress>
+          </p>
+      </div>
+      </div>
 
 
+      <div id="take-care">
+        <p>Taking care of your baby Tama:</p>
+      </div>
 
       <!-- Tamagotchi Gameplay Buttons-->
       <div class="gameplay-buttons">
@@ -92,6 +96,7 @@
 
 
 
+      
 
     </main>
 

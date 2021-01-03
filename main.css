@@ -57,6 +57,8 @@
     font-family: 'VT323', monospace;
     font-size: 25px;
     color: white;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -93,24 +95,62 @@ progress {
 ::-webkit-progress-bar {
     background-color: azure;
     width: 250px;
-    height: 25px;
+    height: 18px;
     border: solid 3pt lightcyan;
     border-radius: 2px;
+    
+}
+
+
+
+button {
+    background-color: rgb(168, 129, 184);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 5px rgb(119, 77, 124);
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    
+    
+}
+
+button:active, button:hover {
+    background: lightcyan;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: 0 5px cyan;
+    outline: none;
+    transform: translateY(3px);
+    color: black;
+}
+
+
+.gameplay-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
 }
 
 
 
 
-
-
+#game-stats {
+   width: 25%;
+   margin: auto;
+}
 
 
 
 html { 
-    background: url(https://media3.giphy.com/media/ZG0f20MziemoEqyQT9/giphy.gif?cid=ecf05e47418502721380d906b03263def87c9df5c2a31dd4&rid=giphy.gif) no-repeat center center fixed; 
+    background: url() no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-color: lightsteelblue;
 }
 
