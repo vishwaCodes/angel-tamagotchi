@@ -60,18 +60,23 @@ $('#bored').on('click', () => {
 });
 
 
-
-
-$('#sleepiness').on('click', sleepUp);
+$('#sleepiness').on('click', () => {
+    sleepUp();
+    tamaNap();
+});
 
 
 // Functions for changing Tama images
 function tamaFed () {
-    $('#tama-main').attr('src', 'images/tama-yum.gif');
+    $('#tama-main').attr('src', 'images/tama-yumm.gif');
 };
 
 function tamaPlay () {
     $('#tama-main').attr('src', 'images/tama-play.gif');
+};
+
+function tamaNap () {
+    $('#tama-main').attr('src', 'images/tama-nap.gif')
 };
 
 
