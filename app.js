@@ -50,7 +50,7 @@ const updateLevels = setInterval(updateStats, 500);
 
 $('#feed').on('click', () => {
     hungerUp();
-    
+    tamaFed();
 });
 
 
@@ -58,6 +58,9 @@ $('#bored').on('click', boredomUp);
 $('#sleepiness').on('click', sleepUp);
 
 
+function tamaFed () {
+    $('#tama-main').attr('src', 'images/tama-yum.gif');
+};
 
 
 

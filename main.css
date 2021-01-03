@@ -1,5 +1,5 @@
 
-.tama-img {
+#tama-main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +9,7 @@
     
 }
 
-.tama-img img {
+#tama-main {
     height: 280px;
     width: auto;
     margin: 0px auto;
