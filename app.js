@@ -72,7 +72,7 @@ function tamaFed () {
 };
 
 function tamaPlay () {
-    $('#tama-main').attr('src', 'images/tama-play.gif');
+    $('#tama-main').attr('src', 'images/tama-fun.gif');
 };
 
 function tamaNap () {

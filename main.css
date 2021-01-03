@@ -37,20 +37,19 @@
 #heading {
     font-family: 'VT323', monospace; 
     font-size: 25px;
-    text-align: center;
-    color: white;
+    color: purple;
 }
 
 #pet-name {
     font-family: 'VT323', monospace;  
     font-size: 25px;
-    color: white;
+    color: purple;
 }
 
 #details {
     font-family: 'VT323', monospace;  
     font-size: 25px;
-    color: white;
+    color: purple;
 }
 
 #take-care {
@@ -65,25 +64,25 @@
 #hunger-status p {
     font-family: 'VT323', monospace;
     font-size: 25px;
-    color: white;
+    color: purple;
 }
 
 #play-status p {
     font-family: 'VT323', monospace;
     font-size: 25px;
-    color: white;
+    color: purple;
 }
 
 #sleep-status p {
     font-family: 'VT323', monospace;
     font-size: 25px;
-    color: white;
+    color: purple;
 }
 
 #age-status p {
     font-family: 'VT323', monospace;
     font-size: 25px;
-    color: white;
+    color: purple;
 }
 
 
@@ -139,18 +138,10 @@ button:active, button:hover {
 
 
 #game-stats {
-   width: 25%;
-   margin: auto;
+    text-align: center;
 }
 
 
 
-html { 
-    background: url() no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-color: lightsteelblue;
-}
+
 
