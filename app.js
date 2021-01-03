@@ -54,14 +54,25 @@ $('#feed').on('click', () => {
 });
 
 
-$('#bored').on('click', boredomUp);
+$('#bored').on('click', () => {
+    boredomUp();
+    tamaPlay();
+});
+
+
+
+
 $('#sleepiness').on('click', sleepUp);
 
 
+// Functions for changing Tama images
 function tamaFed () {
     $('#tama-main').attr('src', 'images/tama-yum.gif');
 };
 
+function tamaPlay () {
+    $('#tama-main').attr('src', 'images/tama-play.gif');
+};
 
 
 // Functions for hunger, sleep and boredom going up
