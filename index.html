@@ -9,22 +9,31 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js" defer integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="/app.js" defer></script>
     <script src="/tamagotchi-pet.js" defer></script>
-    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
     <title>Meet Your Tamagotchi Pet</title>
 </head>
 <body>
     <main>
-      
-          <h3>Discover Your Own Tamagotchi シ</h3>
+        <div id="heading">
+          <h3>Discover Your Own Tamagotchi</h3>
+        </div>
+          
+        <div id="pet-name">
+            <p>Meet your adorable new friend</p>
+        </div>
 
-          <h3 id="pet-name">Meet your adorable new pet</h3>
-          <h3>You will need to feed your little pet, make sure it gets enough sleep and play with it to keep it entertained. Your pet is just a baby, it's your responsibility to give it all the love and attention it needs! Watch your Tama grow as you interact with it.</h3>
-          <h3>Keep your pet happy by not letting it get hungry, sleepy or bored below the level of 3.</h3>
-      
+        <div id="details">
+            <p>You will need to feed your little friend, make sure it gets enough sleep and play with it so it doesn't get bored.
+               Keep your friend happy by not letting it get hungry, sleepy or bored below the level of 3.
+            </p>
+        </div>
 
       <!-- Tamagotchi Image (Made by me on SketchBook & later converted to a gif on Giphy)-->
-      <div id="tama-img">
-          <img src="https://media3.giphy.com/media/4W4uXsuTMAd1E0ibGD/giphy.gif" alt="tama-og">
+      <div class="tama-img">
+          <img src="/images/tamagotchi2.gif" alt="tama-og">
       </div> 
       
 
@@ -33,17 +42,15 @@
       <div class="start-game">
       <!-- Tamagotchi Start Button -->    
       <section class="tamagotchi-start">
-          <button class="startGame">Start Game</button>
+          <!--<button class="startGame">Start Game</button>-->
       </section>
       </div>
 
 
       
 
-      <div>
-          <section class="take-care-of-tama">
-              <h3>Taking care of your baby Tamagotchi:</h3>
-          </section>
+      <div id="take-care">
+        <p>Taking care of your baby Tama:</p>
       </div>
 
       <!-- Game Stats -->
@@ -78,26 +85,10 @@
 
       <!-- Tamagotchi Gameplay Buttons-->
       <div class="gameplay-buttons">
-          <button id="feed">Feed me yummy food</button>
-          <button id="bored">Playtime</button>
-          <button id="sleepiness">I need a nap</button>
+          <button id="feed">( ˘▽˘)っ♨</button>
+          <button id="bored">( ﾟ-ﾟ)_ρ┳┻┳ﾟσ彡(ﾟoﾟ )</button>
+          <button id="sleepiness">[(－－)]..zzZ</button>
       </div>
-
-
-
-
-
-
-      
-
-      
-
-
-
-
-
-
-
 
 
 

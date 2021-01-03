@@ -16,7 +16,7 @@ window.onload = function() {
 
   const tamaName = prompt('What would you like to name your new pet?', '');
   if (tamaName !== null) {
-    $('#pet-name').html('Meet your adorable new pet ' + tamaName + '!');
+    $('#pet-name').html('Meet your adorable new friend ' + tamaName + '!');
 };
      
 };
@@ -28,7 +28,7 @@ window.onload = function() {
 let hunger = 10;
 let sleepiness = 10;
 let boredom = 10;
-let age = 10;
+let age = 1;
 
 
 // Set interval, the game stats go down every 5 seconds

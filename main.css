@@ -1,5 +1,116 @@
 
-#hunger-status {
-    color: black;
+.tama-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 20px;
+    
+    
+}
+
+.tama-img img {
+    height: 280px;
+    width: auto;
+    margin: 0px auto;
+    background-repeat: no repeat;
+    animation: pulse 2s infinite;
+    
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.75);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+#heading {
+    font-family: 'VT323', monospace; 
+    font-size: 25px;
+    text-align: center;
+    color: white;
+}
+
+#pet-name {
+    font-family: 'VT323', monospace;  
+    font-size: 25px;
+    color: white;
+}
+
+#details {
+    font-family: 'VT323', monospace;  
+    font-size: 25px;
+    color: white;
+}
+
+#take-care {
+    font-family: 'VT323', monospace;
+    font-size: 25px;
+    color: white;
+}
+
+
+#hunger-status p {
+    font-family: 'VT323', monospace;
+    font-size: 25px;
+    color: white;
+}
+
+#play-status p {
+    font-family: 'VT323', monospace;
+    font-size: 25px;
+    color: white;
+}
+
+#sleep-status p {
+    font-family: 'VT323', monospace;
+    font-size: 25px;
+    color: white;
+}
+
+#age-status p {
+    font-family: 'VT323', monospace;
+    font-size: 25px;
+    color: white;
+}
+
+
+
+progress {
+    -webkit-appearance: none;
+}
+
+::-webkit-progress-bar {
+    background-color: azure;
+    width: 250px;
+    height: 25px;
+    border: solid 3pt lightcyan;
+    border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+
+html { 
+    background: url(https://media3.giphy.com/media/ZG0f20MziemoEqyQT9/giphy.gif?cid=ecf05e47418502721380d906b03263def87c9df5c2a31dd4&rid=giphy.gif) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
