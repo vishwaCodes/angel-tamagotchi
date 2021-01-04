@@ -16,13 +16,14 @@
 
 #heading {
     font-family: 'VT323', monospace;  
-    font-size: 25px;
-    color: purple;
-    transition: all 2s ease-in-out;
-    background-color: cadetblue;
-    background-size: cover;
-    display: block;
-    padding-bottom: 2px;
+    font-size: 35px;
+    color: black;
+    -webkit-text-stroke: 1px rgb(199, 164, 170);
+    -webkit-text-fill-color: rgb(77, 112, 177);
+    transition: all 2s ease-in-out; 
+    text-align: center;
+    border: 5px solid palegreen;
+    background-color: rgb(230, 229, 215);
     
 }
 
@@ -30,10 +31,13 @@
 #pet-name {
     font-family: 'VT323', monospace;  
     font-size: 25px;
-    color: purple;
     transition: all 2s ease-in-out;
-    background-color: burlywood;
-    padding-bottom: 10px;
+    -webkit-text-stroke: 1px grey;
+    -webkit-text-fill-color: rgb(139, 185, 153);
+    transition: all 2s ease-in-out; 
+    text-align: center;
+    border: 3px solid pink;
+
 }
 
 #details {
@@ -62,6 +66,7 @@
     font-family: 'VT323', monospace;
     font-size: 25px;
     color: purple;
+    
 }
 
 #play-status p {
@@ -86,6 +91,8 @@
 
 progress {
     -webkit-appearance: none;
+    background-color: purple;
+    border-radius: 10px;
 }
 
 ::-webkit-progress-bar {
@@ -94,8 +101,13 @@ progress {
     height: 18px;
     border: solid 3pt lightcyan;
     border-radius: 2px;
-    
 }
+
+progress::-webkit-progress-value {  
+    border-radius: 20px;
+    background: linear-gradient(rgb(123, 186, 190), rgb(196, 192, 255))
+} 
+
 
 button {
     background: linear-gradient(rgb(67, 110, 151), rgb(164, 155, 189));
@@ -143,15 +155,19 @@ button:active, button:hover {
     padding-top: 5px;
 }
 
-
-
-
 .game-stats {
-    text-align: center;
-    background-color: plum;
-    background-size: cover;
-    padding-bottom: 5px;
+    background-color: tan;
 }
+
+
+#progressBar {
+    background: lightyellow;
+    padding: 3px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
 
 
 
