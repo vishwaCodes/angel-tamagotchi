@@ -68,15 +68,15 @@ $('#sleepiness').on('click', () => {
 
 // Functions for changing Tama images
 function tamaFed () {
-    $('#tama-main').attr('src', 'images/tama-yumm.gif');
+    $('.w3-circle').attr('src', 'images/tama-yumm.gif');
 };
 
 function tamaPlay () {
-    $('#tama-main').attr('src', 'images/tama-fun.gif');
+    $('.w3-circle').attr('src', 'images/tama-fun.gif');
 };
 
 function tamaNap () {
-    $('#tama-main').attr('src', 'images/tama-nap.gif')
+    $('.w3-circle').attr('src', 'images/tama-nap.gif')
 };
 
 

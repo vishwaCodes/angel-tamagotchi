@@ -1,63 +1,60 @@
-
-#tama-main {
+.tama-img {
+    background-color: rgb(132, 124, 180);
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 10px;
-    margin: 20px;
-    
-    
+    justify-content: center;
+    height: 60vh;
+    width: 100%
 }
 
-#tama-main {
-    height: 280px;
-    width: auto;
-    margin: 0px auto;
-    background-repeat: no repeat;
-    animation: pulse 2s infinite;
-    
+.w3-circle {
+    height: 250px;
 }
 
-@keyframes pulse {
-    from {
-        transform: scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(0.75);
-        opacity: 1;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
+
 
 
 #heading {
-    font-family: 'VT323', monospace; 
+    font-family: 'VT323', monospace;  
     font-size: 25px;
     color: purple;
+    transition: all 2s ease-in-out;
+    background-color: cadetblue;
+    background-size: cover;
+    display: block;
+    padding-bottom: 2px;
+    
 }
+
 
 #pet-name {
     font-family: 'VT323', monospace;  
     font-size: 25px;
     color: purple;
+    transition: all 2s ease-in-out;
+    background-color: burlywood;
+    padding-bottom: 10px;
 }
 
 #details {
     font-family: 'VT323', monospace;  
     font-size: 25px;
     color: purple;
+    
 }
 
-#take-care {
+.take-care {
     font-family: 'VT323', monospace;
     font-size: 25px;
-    color: white;
+    color: purple;
+    text-align: center;
+    background-color: rgb(189, 206, 176);
+    background-size: cover;
     display: flex;
     justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    
 }
 
 
@@ -100,10 +97,8 @@ progress {
     
 }
 
-
-
 button {
-    background-color: rgb(168, 129, 184);
+    background: linear-gradient(rgb(67, 110, 151), rgb(164, 155, 189));
     color: white;
     border: none;
     border-radius: 5px;
@@ -113,9 +108,12 @@ button {
     cursor: pointer;
     text-align: center;
     outline: none;
-    
-    
+    font-family: 'VT323', monospace;
+    opacity: 1;
+    transition: all 1s ease-in-out;
 }
+
+
 
 button:active, button:hover {
     background: lightcyan;
@@ -125,23 +123,35 @@ button:active, button:hover {
     outline: none;
     transform: translateY(3px);
     color: black;
+    opacity: 1;
 }
 
 
-.gameplay-buttons {
+.btn-group {
+    border: 2px solid black;   
+    border-width: thick;
+    background: linear-gradient(black, pink);
+    background-position: center;
+    background-size: cover;
+    border-collapse: separate;
+    border-spacing: 50px;
     display: flex;
-    justify-content: space-evenly;
     flex-direction: row;
+    justify-content: space-evenly;
+    line-height:30px;
+    padding-bottom: 10px;
+    padding-top: 5px;
 }
 
 
 
 
-#game-stats {
+.game-stats {
     text-align: center;
+    background-color: plum;
+    background-size: cover;
+    padding-bottom: 5px;
 }
-
-
 
 
 
