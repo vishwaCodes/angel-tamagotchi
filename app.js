@@ -14,9 +14,9 @@ window.onload = function() {
 
     const tama = new Tama();
 
-  const tamaName = prompt('What would you like to name your new pet?', '');
+  const tamaName = prompt('Give your Tamagotchi a name', '');
   if (tamaName !== null) {
-    $('#pet-name').html('Meet your adorable new friend ' + tamaName + '!');
+    $('#pet-name').html(tamaName + '!');
 };
      
 };
@@ -51,6 +51,7 @@ const updateLevels = setInterval(updateStats, 500);
 $('#feed').on('click', () => {
     hungerUp();
     tamaFed();
+    
 });
 
 
@@ -68,15 +69,15 @@ $('#sleepiness').on('click', () => {
 
 // Functions for changing Tama images
 function tamaFed () {
-    $('.w3-circle').attr('src', 'images/tama-yumm.gif');
+    $('.tama-main').attr('src', 'images/tama-yumm.gif');
 };
 
 function tamaPlay () {
-    $('.w3-circle').attr('src', 'images/tama-fun.gif');
+    $('.tama-main').attr('src', 'images/tama-fun.gif');
 };
 
 function tamaNap () {
-    $('.w3-circle').attr('src', 'images/tama-nap.gif')
+    $('.tama-main').attr('src', 'images/tama-nap.gif');
 };
 
 
@@ -182,16 +183,20 @@ function updateStats () {
 
 function tamaDeath () {
     if (hunger === 3) {
-        alert('Your pet has died out of hunger');
+        alert('Your friend ran away');
+        
         clearIntervals();
     } else if (boredom === 3) {
-        alert('Your pet has died out of boredom');
+        alert('Your friend ran away');
+        
         clearIntervals();
     } else if (sleepiness === 3) {
-        alert('Your pet has died out of tiredness');
+        alert('Your friend ran away');
+        
         clearIntervals();
     } else if (age >= 15) {
-        alert('Your pet has run away');
+        alert('Your friend ran away due to old age');
+        
         clearIntervals();
     };
 };

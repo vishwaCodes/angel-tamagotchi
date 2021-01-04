@@ -4,12 +4,33 @@
     align-items: center;
     justify-content: center;
     height: 60vh;
-    width: 100%
+    width: 100%;
+    background: url('https://ak.picdn.net/shutterstock/videos/14227916/thumb/1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.w3-circle {
-    height: 250px;
+.tama-main {
+    display: block;
+    height: 280px;
+    width: auto;
+    margin: 0px auto;
+    background-repeat: no repeat;
+    animation: pulse 2s ease-out infinite;
 }
+
+@keyframes pulse {
+    15% {
+        transform: scale(1);
+        opacity: 5;
+    }
+    50% {
+        transform: scale(0.75);
+        opacity: 1;
+    }
+    
+}
+
 
 
 
@@ -30,13 +51,14 @@
 
 #pet-name {
     font-family: 'VT323', monospace;  
-    font-size: 25px;
+    font-size: 40px;
     transition: all 2s ease-in-out;
     -webkit-text-stroke: 1px grey;
-    -webkit-text-fill-color: rgb(139, 185, 153);
+    -webkit-text-fill-color: rgb(72, 84, 136);
     transition: all 2s ease-in-out; 
     text-align: center;
-    border: 3px solid pink;
+    border: 3px solid rgb(170, 204, 188);
+    background: linear-gradient(rgb(151, 165, 187), rgb(170, 170, 190));
 
 }
 
@@ -47,19 +69,6 @@
     
 }
 
-.take-care {
-    font-family: 'VT323', monospace;
-    font-size: 25px;
-    color: purple;
-    text-align: center;
-    background-color: rgb(189, 206, 176);
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    padding-top: 25px;
-    padding-bottom: 10px;
-    
-}
 
 
 #hunger-status p {
@@ -101,6 +110,7 @@ progress {
     height: 18px;
     border: solid 3pt lightcyan;
     border-radius: 2px;
+    
 }
 
 progress::-webkit-progress-value {  
@@ -133,7 +143,7 @@ button:active, button:hover {
     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
     box-shadow: 0 5px cyan;
     outline: none;
-    transform: translateY(3px);
+    transform: translateY(1px);
     color: black;
     opacity: 1;
 }
@@ -156,16 +166,21 @@ button:active, button:hover {
 }
 
 .game-stats {
-    background-color: tan;
+    background-color: black;
+    display: block;
+
 }
 
 
 #progressBar {
-    background: lightyellow;
-    padding: 3px;
+    background: linear-gradient(rgb(173, 201, 151), rgb(136, 165, 173));
+    padding: auto;
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    justify-content: space-around;
+    flex-direction: column table;
+    flex-wrap: wrap-reverse;
+    padding: 28px;
+    
 }
 
 
